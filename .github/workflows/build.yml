@@ -17,7 +17,7 @@ jobs:
       image: debian:bullseye
       env: { LANG: "C.UTF-8" }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@main
 
       - name: Install deps
         run: |
@@ -28,14 +28,14 @@ jobs:
             --no-install-recommends
 
       - name: Checkout Luanti src
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: luanti-org/luanti
           path: luanti
           ref: ${{ env.LUANTI_REF }}
 
       - name: Checkout LuaJIT src
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: LuaJIT/LuaJIT
           path: luajit
