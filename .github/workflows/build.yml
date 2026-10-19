@@ -12,9 +12,9 @@ jobs:
     strategy:
       matrix:
         arch: [x86_64, aarch64]
-    runs-on: ${{ matrix.arch == 'x86_64' && 'ubuntu-latest' || 'ubuntu-26.04-arm' }}
+    runs-on: ${{ matrix.arch == 'x86_64' && 'ubuntu-latest' || 'ubuntu-24.04-arm' }}
     container:
-      image: debian:bullseye
+      image: debian:bookworm
       env: { LANG: "C.UTF-8" }
     steps:
       - uses: actions/checkout@main
