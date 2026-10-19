@@ -103,6 +103,7 @@ INCLUDE_LIBS=(
 	libsqlite3.so.0
 	libleveldb.so.1d
 	 libsnappy.so.1
+	libzip.so.4
 )
 
 mkdir -p usr/lib/
